@@ -3,19 +3,12 @@
  Copyright (C) 2014-2015 Teem2 LLC
 */
 
-<!--/**
- * @class dr.teem-sample_component {UI Components}
- * @extends dr.view
- * Sample component to demonstrate how to write the server-side node
- * component, and the associated Dreem component.
- * 
- */-->
 <class name="sample_client" >
 	<attribute name="init" type="event"/>
 	<handler event="init">
 		console.log("Sample Client Loaded!")
 	</handler>
 	<method name="load" args="arg1">
-		return teem.sample_server2.load(arg1)
+		return teem.sample_server.load(arg1)
 	</method>
 </class>	

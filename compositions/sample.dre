@@ -1,13 +1,14 @@
 <composition>
-	<sample_server2/>
+	<sample_server/>
 	<screens>
 		<handler event="init">
 			console.log("Server side Init!")
 		</handler>
 		<screen name="default" type="browser">
 			<handler event="init">
-				console.log("Client side Init!");								
-				this.child[0].load("test").then(function(r){console.dir(r);});
+				console.log("Client side Init!");				
+				console.dir(this);
+				this.client.	load("test").then(function(r){console.dir(r);});
 			</handler>
 			<sample_client name="client"/>		
 		</screen>
