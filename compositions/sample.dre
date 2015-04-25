@@ -1,0 +1,10 @@
+<composition>
+	<sample_server/>
+	<screens>
+		<screen name="default" type="browser">
+			<handler event="init">
+				console.log("Init!")
+			</handler>
+		</screen>
+	</screens>
+</composition>
