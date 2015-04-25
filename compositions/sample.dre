@@ -1,10 +1,17 @@
 <composition>
-	<sample_server/>
+	<sample_server2/>
 	<screens>
+		<handler event="init">
+			console.log("Server side Init!")
+		</handler>
 		<screen name="default" type="browser">
 			<handler event="init">
-				console.log("Init!")
+				console.log("Client side Init!")
+				console.log("reply from server: ");
+				teem.sample_server2.load("test").then(function(r){console.dir(r);});
 			</handler>
+			<sample_client/>
+	
 		</screen>
 	</screens>
 </composition>

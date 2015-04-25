@@ -1,0 +1,16 @@
+/*
+ The MIT License (see LICENSE)
+ Copyright (C) 2014-2015 Teem2 LLC
+*/
+<class name="sample_server2">
+	<attribute name="init" type="event"/>
+	<handler event="init">		
+		console.color('~by~Sample_server 2~~ object started on server\n')	
+	
+	
+	</handler>
+	<method name="load" args="param">
+		console.log("load called! incoming param: "  + param);
+		return "payload";
+	</method>
+</class>

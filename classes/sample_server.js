@@ -5,11 +5,10 @@
 
 define(function(require, exports, module)
 {
-	var node = require("../classes/node")
+	var node = require("$CLASSES/node")
 	return node.extend("sample_server", function()
 	{
 		this.attribute("init", "event")
-		this.attribute("load", "method")
 		
 		this.init = function()
 		{
@@ -17,9 +16,9 @@ define(function(require, exports, module)
 			console.color('~br~sample_server~~ object started on server\n')	
 		}
 		
-		this.load = function()
+		this.load = function(param)
 		{
-			console.log("load called!");
+			console.log("load called! incoming param: "  + param);
 			return "payload";
 		}
 	})
