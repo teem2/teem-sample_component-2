@@ -11,11 +11,11 @@
  * 
  */-->
 <class name="sample_client" >
-	<attribute name="init"/>
+	<attribute name="init" type="event"/>
 	<handler event="init">
 		console.log("Sample Client Loaded!")
 	</handler>
 	<method name="load" args="arg1">
-		return teem.sample_server.load(arg1);	
+		return teem.sample_server2.load(arg1)
 	</method>
-</class>
+</class>	

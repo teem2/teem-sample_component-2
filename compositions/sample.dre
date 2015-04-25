@@ -6,12 +6,10 @@
 		</handler>
 		<screen name="default" type="browser">
 			<handler event="init">
-				console.log("Client side Init!")
-				console.log("reply from server: ");
-				teem.sample_server2.load("test").then(function(r){console.dir(r);});
+				console.log("Client side Init!");								
+				this.child[0].load("test").then(function(r){console.dir(r);});
 			</handler>
-			<sample_client/>
-	
+			<sample_client name="client"/>		
 		</screen>
 	</screens>
 </composition>
